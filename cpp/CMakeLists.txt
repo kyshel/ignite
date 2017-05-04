@@ -18,7 +18,8 @@ ocv_include_modules_recurse(${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
 
 
 MACRO(OPENCV_DEFINE_CPP_EXAMPLE name srcs)
-	set(the_target "lala_${name}")
+	#set(the_target "lala_${name}")
+	set(the_target "${name}")
 	add_executable(${the_target} ${srcs})
 	ocv_target_link_libraries(${the_target} ${OPENCV_LINKER_LIBS} ${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
 ENDMACRO()
